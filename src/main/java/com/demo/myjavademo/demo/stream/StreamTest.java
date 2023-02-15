@@ -25,7 +25,7 @@ public class StreamTest {
         Stream<Integer> stream = strings.stream().filter(new Predicate() {
             @Override
             public boolean test(Object o) {
-                System.out.println("Predicate.test 执行");
+                System.out.println("Predicate.test 执行------" + o);
                 return true;
             }
         });
@@ -34,6 +34,9 @@ public class StreamTest {
         stream.count();
     }
 
+    /**
+     * Collectors.join 方法测试
+     */
     @Test
     public void join_test() {
         List<Integer> list = new ArrayList<>(Arrays.asList(new Integer[]{1, 1, 1, 4, 5, 6}));
