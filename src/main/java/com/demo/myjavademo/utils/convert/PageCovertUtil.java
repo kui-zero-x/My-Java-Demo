@@ -1,4 +1,4 @@
-package com.demo.myjavademo.utils.collectionConvertUtils;
+package com.demo.myjavademo.utils.convert;
 
 import cn.hutool.core.bean.BeanUtil;
 import com.baomidou.mybatisplus.core.metadata.IPage;

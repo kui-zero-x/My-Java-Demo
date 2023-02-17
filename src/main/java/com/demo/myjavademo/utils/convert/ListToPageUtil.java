@@ -1,4 +1,4 @@
-package com.demo.myjavademo.utils.collectionConvertUtils;
+package com.demo.myjavademo.utils.convert;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;

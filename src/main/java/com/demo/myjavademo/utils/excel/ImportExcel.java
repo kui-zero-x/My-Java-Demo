@@ -1,7 +1,7 @@
 /**
  * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
  */
-package com.demo.myjavademo.utils.excelUtils;
+package com.demo.myjavademo.utils.excel;
 
 
 import lombok.extern.slf4j.Slf4j;
@@ -291,7 +291,7 @@ public class ImportExcel {
                     return new Integer(((ExcelField) o1[0]).sort()).compareTo(
                             new Integer(((ExcelField) o2[0]).sort()));
                 });
-        // Get excelUtils data
+        // Get excel data
         List<E> dataList = new ArrayList<>();
         for (int i = this.getDataRowNum(); i < this.getLastDataRowNum(); i++) {
             E e = (E) cls.newInstance();

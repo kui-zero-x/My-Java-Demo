@@ -3,7 +3,7 @@
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package com.demo.myjavademo.utils.excelUtils;
+package com.demo.myjavademo.utils.excel;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
