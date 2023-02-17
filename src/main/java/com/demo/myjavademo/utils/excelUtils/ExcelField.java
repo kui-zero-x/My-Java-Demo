@@ -1,7 +1,7 @@
 /**
  * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
  */
-package com.demo.myjavademo.utils.excel;
+package com.demo.myjavademo.utils.excelUtils;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

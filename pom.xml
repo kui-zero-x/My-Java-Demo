@@ -16,6 +16,8 @@
     <properties>
         <java.version>8</java.version>
     </properties>
+
+
     <dependencies>
         <!--核心启动类-->
         <dependency>
@@ -32,12 +34,18 @@
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
+
         <!--Junit 单元测试依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
         <!--cglib动态代理-->
         <dependency>
             <groupId>cglib</groupId>
@@ -85,11 +93,15 @@
             <artifactId>kryo</artifactId>
             <version>5.4.0</version>
         </dependency>
+
+        <!--mybatis-plus-->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.4.1</version>
         </dependency>
     </dependencies>
+
 
     <build>
         <plugins>

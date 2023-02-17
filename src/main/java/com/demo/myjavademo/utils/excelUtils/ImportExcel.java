@@ -1,10 +1,9 @@
 /**
  * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
  */
-package com.demo.myjavademo.utils.excel;
+package com.demo.myjavademo.utils.excelUtils;
 
 
-import com.demo.myjavademo.utils.reflection.Reflections;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -292,7 +291,7 @@ public class ImportExcel {
                     return new Integer(((ExcelField) o1[0]).sort()).compareTo(
                             new Integer(((ExcelField) o2[0]).sort()));
                 });
-        // Get excel data
+        // Get excelUtils data
         List<E> dataList = new ArrayList<>();
         for (int i = this.getDataRowNum(); i < this.getLastDataRowNum(); i++) {
             E e = (E) cls.newInstance();
