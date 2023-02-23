@@ -20,7 +20,6 @@
 
     <modules>
         <module>Datastructures-Algorithms</module>
-        <module>Source-Read</module>
     </modules>
 
     <dependencies>
