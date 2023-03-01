@@ -1,8 +1,9 @@
 package com.example.datastructuresalgorithms.Datastructures.Linked;
 
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class SingleLinked<E> implements Linked<E> {
+public class SingleLinked<E> implements Linked<E>, Iterable<E> {
 
     private int size = 0;
 
@@ -192,12 +193,36 @@ public class SingleLinked<E> implements Linked<E> {
         return sb.toString();
     }
 
+    @Override
+    public Iterator<E> iterator() {
+        return new LinkedIterator<>();
+    }
+
+    private class LinkedIterator<E> implements Iterator<E> {
+
+        // 迭代器初始位置在链表头部前面
+        private Node<E> nextNode = (Node<E>) head;
+
+        @Override
+        public boolean hasNext() {
+            return nextNode != null;
+        }
+
+        @Override
+        public E next() {
+            E element = nextNode.element;
+            nextNode = nextNode.next;
+            return element;
+        }
+    }
+
     public static void main(String[] args) {
         SingleLinked<String> singleLinked = new SingleLinked<>();
         for (int i = 0; i < 9; i++) {
             singleLinked.addLast(i + "");
         }
-        System.out.println(singleLinked.get(6));
-        System.out.println(singleLinked);
+        for (String s : singleLinked) {
+            System.out.println(s);
+        }
     }
 }

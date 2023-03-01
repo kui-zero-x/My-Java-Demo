@@ -17,7 +17,9 @@ public class ArrayStack<E> implements Stack<E>, Iterable<E> {
     }
 
     public ArrayStack(int capacity) {
-        if (capacity <= DEFAULT_CAPACITY) {
+        if (capacity < 0) {
+            throw new IndexOutOfBoundsException("索引不能为负");
+        } else if (capacity <= DEFAULT_CAPACITY) {
             elements = (E[]) new Object[DEFAULT_CAPACITY];
         } else {
             elements = (E[]) new Object[capacity];
