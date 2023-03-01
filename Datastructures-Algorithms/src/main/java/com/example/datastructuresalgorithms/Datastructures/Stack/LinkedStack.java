@@ -34,9 +34,9 @@ public class LinkedStack<E> implements Stack<E>, Iterable<E> {
     @Override
     public E pop() {
         if (size == 0) throw new NoSuchElementException("栈为空");
-        E elemnet = linked.removeLast();
+        E element = linked.removeLast();
         size--;
-        return elemnet;
+        return element;
     }
 
     @Override
