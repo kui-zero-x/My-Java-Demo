@@ -94,7 +94,7 @@ public class ArrayStack<E> implements Stack<E>, Iterable<E> {
 
     public static void main(String[] args) {
         ArrayStack<String> stack = new ArrayStack<>();
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 11; i++) {
             stack.push("" + i);
         }
         for (String s : stack) {
