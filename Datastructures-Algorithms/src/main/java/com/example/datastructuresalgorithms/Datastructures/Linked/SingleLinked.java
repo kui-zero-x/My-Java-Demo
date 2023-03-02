@@ -21,8 +21,7 @@ public class SingleLinked<E> implements Linked<E>, Iterable<E> {
         }
     }
 
-    public SingleLinked() {
-    }
+    public SingleLinked() {}
 
     @Override
     public int size() {
