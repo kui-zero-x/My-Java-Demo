@@ -1,4 +1,4 @@
-package com.example.datastructuresalgorithms.Datastructures.Queue;
+package com.example.DA.Datastructures.Queue;
 
 public interface Queue<E> {
 

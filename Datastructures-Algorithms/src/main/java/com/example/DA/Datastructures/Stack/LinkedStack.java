@@ -1,6 +1,6 @@
-package com.example.datastructuresalgorithms.Datastructures.Stack;
+package com.example.DA.Datastructures.Stack;
 
-import com.example.datastructuresalgorithms.Datastructures.Linked.SingleLinked;
+import com.example.DA.Datastructures.Linked.SingleLinked;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

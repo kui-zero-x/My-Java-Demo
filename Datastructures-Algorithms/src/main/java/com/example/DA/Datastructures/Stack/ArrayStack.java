@@ -1,4 +1,4 @@
-package com.example.datastructuresalgorithms.Datastructures.Stack;
+package com.example.DA.Datastructures.Stack;
 
 import java.util.Arrays;
 import java.util.Iterator;

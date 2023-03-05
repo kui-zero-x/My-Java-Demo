@@ -1,4 +1,4 @@
-package com.example.datastructuresalgorithms.Datastructures.Queue;
+package com.example.DA.Datastructures.Queue;
 
 import java.util.Arrays;
 import java.util.Iterator;

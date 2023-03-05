@@ -1,4 +1,4 @@
-package com.example.datastructuresalgorithms.Datastructures.Linked;
+package com.example.DA.Datastructures.Linked;
 
 public interface Linked<E> {
 

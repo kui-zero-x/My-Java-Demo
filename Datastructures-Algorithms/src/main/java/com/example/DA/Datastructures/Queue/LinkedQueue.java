@@ -1,7 +1,6 @@
-package com.example.datastructuresalgorithms.Datastructures.Queue;
+package com.example.DA.Datastructures.Queue;
 
-import com.example.datastructuresalgorithms.Datastructures.Linked.SingleLinked;
-import com.example.datastructuresalgorithms.Datastructures.Stack.ArrayStack;
+import com.example.DA.Datastructures.Linked.SingleLinked;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
