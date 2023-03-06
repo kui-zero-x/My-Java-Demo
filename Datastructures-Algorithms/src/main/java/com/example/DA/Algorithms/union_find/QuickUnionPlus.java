@@ -2,7 +2,7 @@ package com.example.DA.Algorithms.union_find;
 
 
 /**
- * （Ⅱ）加权 quick-union 算法
+ * （Ⅲ）加权 quick-union 算法
  */
 public class QuickUnionPlus {
 
