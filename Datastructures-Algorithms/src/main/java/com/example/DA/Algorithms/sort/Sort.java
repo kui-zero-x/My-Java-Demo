@@ -2,7 +2,7 @@ package com.example.DA.Algorithms.sort;
 
 import java.util.Arrays;
 
-public interface ArraySort<T> {
+public interface Sort {
 
     <T extends Comparable<T>> void sort(T[] source);
 
@@ -27,7 +27,7 @@ public interface ArraySort<T> {
         return flag;
     }
 
-    default  <T extends Comparable<T>> String print(T[] target) {
-        return Arrays.toString(target);
+    default  <T extends Comparable<T>> void print(T[] target) {
+        System.out.println(Arrays.toString(target));
     }
 }
