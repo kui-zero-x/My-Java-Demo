@@ -19,7 +19,7 @@ public interface Sort {
     default  <T extends Comparable<T>> boolean isSorted(T[] target) {
         boolean flag = true;
         for (int i = 0; i < target.length - 1; i++) {
-            if (target[i].compareTo(target[i + i]) == 1) {
+            if (target[i].compareTo(target[i + 1]) == 1) {
                 flag = false;
                 break;
             }
