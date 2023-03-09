@@ -2,7 +2,7 @@ package com.example.DA.Algorithms.sort;
 
 import java.util.Random;
 
-public class InsertSort implements Sort {
+public class Insertion implements Sort {
 
 
     @Override
@@ -21,15 +21,15 @@ public class InsertSort implements Sort {
     }
 
     public static void main(String[] args) {
-        InsertSort insertSort = new InsertSort();
+        Insertion insertion = new Insertion();
         Random random = new Random();
         Integer[] source = new Integer[20];
         for (int i = 0; i < source.length; i++) {
             source[i] = random.nextInt(21);
         }
-        insertSort.print(source);
-        insertSort.sort(source);
-        insertSort.print(source);
-        System.out.println(insertSort.isSorted(source));
+        insertion.print(source);
+        insertion.sort(source);
+        insertion.print(source);
+        System.out.println(insertion.isSorted(source));
     }
 }
