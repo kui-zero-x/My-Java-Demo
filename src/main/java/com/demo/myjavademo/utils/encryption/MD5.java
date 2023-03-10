@@ -54,7 +54,9 @@ public class MD5 {
     }
 
     public static void main(String[] args) throws NoSuchAlgorithmException {
-        System.out.println(encodeMD5Lowercase("70028061678348015e02703d5c35466784639b5ae65a8da43"));
+//        System.out.println(System.currentTimeMillis() / 1000);
+        System.out.println(encodeMD5Lowercase("70028061678416593e02703d5c35466784639b5ae65a8da43"));
+//        System.out.println(encodeMD5Lowercase("18700738616"));
     }
 
     /**
