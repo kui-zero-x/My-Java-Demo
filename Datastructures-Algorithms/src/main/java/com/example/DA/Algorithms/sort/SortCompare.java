@@ -8,14 +8,19 @@ public class SortCompare {
         long l1 = 0l;
         long l2 = 0l;
         switch (sortAlgorithms) {
-            case "Selection" :
+            case "Selection":
                 l1 = System.currentTimeMillis();
                 new Selection().sort(source);
                 l2 = System.currentTimeMillis();
                 break;
-            case "Insertion" :
+            case "Insertion":
                 l1 = System.currentTimeMillis();
                 new Insertion().sort(source);
+                l2 = System.currentTimeMillis();
+                break;
+            case "Shell":
+                l1 = System.currentTimeMillis();
+                new Shell().sort(source);
                 l2 = System.currentTimeMillis();
                 break;
         }
@@ -30,12 +35,14 @@ public class SortCompare {
             for (int j = 0; j < N; j++) {
                 integers[j] = random.nextInt(101);
             }
-            total += millisecond(sortAlgorithms, integers);
+            total = total + millisecond(sortAlgorithms, integers);
         }
         return total;
     }
 
     public static void main(String[] args) {
-        System.out.println("Selection / Insertion = " + totalMillisecond("Selection", 20, 20) + "  " + totalMillisecond("Insertion", 20, 20));
+        System.out.println("Selection / Insertion / Shell = " + totalMillisecond("Selection", 1000, 1000)
+                + " / " + totalMillisecond("Insertion", 1000, 1000)
+                + " / " + totalMillisecond("Shell", 1000, 1000));
     }
 }
