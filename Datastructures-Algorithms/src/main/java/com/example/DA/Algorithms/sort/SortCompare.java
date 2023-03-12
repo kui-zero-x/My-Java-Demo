@@ -15,7 +15,7 @@ public class SortCompare {
                 break;
             case "Insertion":
                 l1 = System.currentTimeMillis();
-                new Insertion().sort(source);
+                new Insertion().sortEnhance(source);
                 l2 = System.currentTimeMillis();
                 break;
             case "Shell":
@@ -23,6 +23,10 @@ public class SortCompare {
                 new Shell().sort(source);
                 l2 = System.currentTimeMillis();
                 break;
+            case "Merge":
+                l1 = System.currentTimeMillis();
+                new Merge("down-to-top").sort(source);
+                l2 = System.currentTimeMillis();
         }
         return l2 - l1;
     }
@@ -41,8 +45,9 @@ public class SortCompare {
     }
 
     public static void main(String[] args) {
-        System.out.println("Selection / Insertion / Shell = " + totalMillisecond("Selection", 1000, 1000)
-                + " / " + totalMillisecond("Insertion", 1000, 1000)
-                + " / " + totalMillisecond("Shell", 1000, 1000));
+        System.out.println("Selection / Insertion / Shell / Merge = " + totalMillisecond("Selection", 2000, 2000)
+                + " / " + totalMillisecond("Insertion", 2000, 2000)
+                + " / " + totalMillisecond("Shell", 2000, 2000)
+                + " / " + totalMillisecond("Merge", 2000, 2000));
     }
 }
