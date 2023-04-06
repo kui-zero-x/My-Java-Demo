@@ -33,7 +33,13 @@
  * http://creativecommons.org/publicdomain/zero/1.0/
  */
 
-package java.util;
+package CollectionFramework.Collections.Queue;
+
+import CollectionFramework.Collections.List.LinkedList;
+
+import java.util.Collection;
+import java.util.NoSuchElementException;
+import java.util.PriorityQueue;
 
 /**
  * A collection designed for holding elements prior to processing.

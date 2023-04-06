@@ -23,8 +23,11 @@
  *
  */
 
-package java.util;
+package CollectionFramework.Collections.List;
 
+import CollectionFramework.Collections.Queue.Queue;
+
+import java.util.*;
 import java.util.function.Consumer;
 
 /**

@@ -23,9 +23,11 @@
  *
  */
 
-package java.util;
+package CollectionFramework.Collections.Set;
 
 import sun.misc.SharedSecrets;
+
+import java.util.*;
 
 /**
  * A specialized {@link Set} implementation for use with enum types.  All of

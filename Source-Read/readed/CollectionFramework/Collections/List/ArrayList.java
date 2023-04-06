@@ -23,8 +23,9 @@
  *
  */
 
-package java.util;
+package CollectionFramework.Collections.List;
 
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
