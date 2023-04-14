@@ -153,7 +153,7 @@ public interface Queue<E> extends Collection<E> {
      * immediately without violating capacity restrictions, returning
      * {@code true} upon success and throwing an {@code IllegalStateException}
      * if no space is currently available.
-     *
+     *q
      * @param e the element to add
      * @return {@code true} (as specified by {@link Collection#add})
      * @throws IllegalStateException if the element cannot be added at this
