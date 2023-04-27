@@ -61,13 +61,13 @@ import sun.misc.SharedSecrets;
  * The LogManager defines two optional system properties that allow control over
  * the initial configuration:
  * <ul>
- * <li>"java.util.logging.config.class"
- * <li>"java.util.logging.config.file"
+ * <li>"java.util.logging.Configs.class"
+ * <li>"java.util.logging.Configs.file"
  * </ul>
  * These two properties may be specified on the command line to the "java"
  * command, or as system property definitions passed to JNI_CreateJavaVM.
  * <p>
- * If the "java.util.logging.config.class" property is set, then the
+ * If the "java.util.logging.Configs.class" property is set, then the
  * property value is treated as a class name.  The given class will be
  * loaded, an object will be instantiated, and that object's constructor
  * is responsible for reading in the initial configuration.  (That object
@@ -75,8 +75,8 @@ import sun.misc.SharedSecrets;
  * alternate configuration class can use <tt>readConfiguration(InputStream)</tt>
  * to define properties in the LogManager.
  * <p>
- * If "java.util.logging.config.class" property is <b>not</b> set,
- * then the "java.util.logging.config.file" system property can be used
+ * If "java.util.logging.Configs.class" property is <b>not</b> set,
+ * then the "java.util.logging.Configs.file" system property can be used
  * to specify a properties file (in java.util.Properties format). The
  * initial logging configuration will be read from this file.
  * <p>
@@ -111,7 +111,7 @@ import sun.misc.SharedSecrets;
  * to false a Handler needs to be configured for this logger otherwise
  * no logging messages are delivered.
  *
- * <li>A property "config".  This property is intended to allow
+ * <li>A property "Configs".  This property is intended to allow
  * arbitrary configuration code to be run.  The property defines a
  * whitespace or comma separated list of class names.  A new instance will be
  * created for each named class.  The default constructor of each class
@@ -121,7 +121,7 @@ import sun.misc.SharedSecrets;
  * <p>
  * Note that all classes loaded during LogManager configuration are
  * first searched on the system class path before any user class path.
- * That includes the LogManager class, any config classes, and any
+ * That includes the LogManager class, any Configs classes, and any
  * handler classes.
  * <p>
  * Loggers are organized into a naming hierarchy based on their
@@ -1110,7 +1110,7 @@ public class LogManager {
     //   - minimum: 0.57 ms
     //   - maximum: 25.3 ms
     //
-    // The same config gives us a better decreased weak ref count
+    // The same Configs gives us a better decreased weak ref count
     // than increased weak ref count in the LoggerWeakRefLeak test.
     // Here are stats for cleaning up sets of 400 named Loggers:
     //   - test duration 2 minutes
@@ -1266,7 +1266,7 @@ public class LogManager {
         checkPermission();
 
         // if a configuration class is specified, load it and use it.
-        String cname = System.getProperty("java.util.logging.config.class");
+        String cname = System.getProperty("java.util.logging.Configs.class");
         if (cname != null) {
             try {
                 // Instantiate the named class.  It is its constructor's
@@ -1284,11 +1284,11 @@ public class LogManager {
             } catch (Exception ex) {
                 System.err.println("Logging configuration class \"" + cname + "\" failed");
                 System.err.println("" + ex);
-                // keep going and useful config file.
+                // keep going and useful Configs file.
             }
         }
 
-        String fname = System.getProperty("java.util.logging.config.file");
+        String fname = System.getProperty("java.util.logging.Configs.file");
         if (fname == null) {
             fname = System.getProperty("java.home");
             if (fname == null) {
@@ -1408,7 +1408,7 @@ public class LogManager {
         // Load the properties
         props.load(ins);
         // Instantiate new configuration objects.
-        String names[] = parseClassNames("config");
+        String names[] = parseClassNames("Configs");
 
         for (int i = 0; i < names.length; i++) {
             String word = names[i];
@@ -1416,7 +1416,7 @@ public class LogManager {
                 Class<?> clz = ClassLoader.getSystemClassLoader().loadClass(word);
                 clz.newInstance();
             } catch (Exception ex) {
-                System.err.println("Can't load config class \"" + word + "\"");
+                System.err.println("Can't load Configs class \"" + word + "\"");
                 System.err.println("" + ex);
                 // ex.printStackTrace();
             }

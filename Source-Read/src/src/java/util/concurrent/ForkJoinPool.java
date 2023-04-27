@@ -307,7 +307,7 @@ public class ForkJoinPool extends AbstractExecutorService {
      * Nearly all essentially atomic control state is held in two
      * volatile variables that are by far most often read (not
      * written) as status and consistency checks. (Also, field
-     * "config" holds unchanging configuration state.)
+     * "Configs" holds unchanging configuration state.)
      *
      * Field "ctl" contains 64 bits holding information needed to
      * atomically decide to add, inactivate, enqueue (on an event
@@ -759,7 +759,7 @@ public class ForkJoinPool extends AbstractExecutorService {
     static final int INACTIVE     = 1 << 31;       // must be negative
     static final int SS_SEQ       = 1 << 16;       // version count
 
-    // Mode bits for ForkJoinPool.config and WorkQueue.config
+    // Mode bits for ForkJoinPool.Configs and WorkQueue.Configs
     static final int MODE_MASK    = 0xffff << 16;  // top half of int
     static final int LIFO_QUEUE   = 0;
     static final int FIFO_QUEUE   = 1 << 16;

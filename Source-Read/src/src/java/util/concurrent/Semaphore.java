@@ -63,7 +63,7 @@ import java.util.concurrent.locks.AbstractQueuedSynchronizer;
  *       available.release();
  *   }
  *
- *   // Not a particularly efficient data structure; just for demo
+ *   // Not a particularly efficient data structure; just for Demos
  *
  *   protected Object[] items = ... whatever kinds of items being managed
  *   protected boolean[] used = new boolean[MAX_AVAILABLE];
