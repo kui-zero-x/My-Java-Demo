@@ -67,7 +67,7 @@ import java.util.*;
  *
  * <dl>
  *
- * <dt>Core and maximum pool sizes</dt>
+ * <dt>core and maximum pool sizes</dt>
  *
  * <dd>A {@code ThreadPoolExecutor} will automatically adjust the
  * pool size (see {@link #getPoolSize})
@@ -528,7 +528,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
     private volatile boolean allowCoreThreadTimeOut;
 
     /**
-     * Core pool size is the minimum number of workers to keep alive
+     * core pool size is the minimum number of workers to keep alive
      * (and not allow to time out etc) unless allowCoreThreadTimeOut
      * is set, in which case the minimum is zero.
      */
@@ -1639,7 +1639,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
      */
     public void allowCoreThreadTimeOut(boolean value) {
         if (value && keepAliveTime <= 0)
-            throw new IllegalArgumentException("Core threads must have nonzero keep alive times");
+            throw new IllegalArgumentException("core threads must have nonzero keep alive times");
         if (value != allowCoreThreadTimeOut) {
             allowCoreThreadTimeOut = value;
             if (value)
@@ -1695,7 +1695,7 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
         if (time < 0)
             throw new IllegalArgumentException();
         if (time == 0 && allowsCoreThreadTimeOut())
-            throw new IllegalArgumentException("Core threads must have nonzero keep alive times");
+            throw new IllegalArgumentException("core threads must have nonzero keep alive times");
         long keepAliveTime = unit.toNanos(time);
         long delta = keepAliveTime - this.keepAliveTime;
         this.keepAliveTime = keepAliveTime;
